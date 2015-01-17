@@ -10,4 +10,4 @@ fortunes.css(".col-md-12 ul li")
 
 #a specific fortune
 
-fortunes.css(".col-md-12 ul li")[10].children.text
+fortunes.css(".col-md-12 ul li")[0 + rand(303)].children.text
