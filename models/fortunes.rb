@@ -1,13 +1,34 @@
 require 'nokogiri'
 require 'open-uri'
 
-fortunesdoc = open("http://joshmadison.com/2008/04/20/fortune-cookie-fortunes/")
+class Fortune
 
-fortunes = Nokogiri::HTML(fortunesdoc)
+	attr_accessor :fortunes
 
-#gives an array of all the fortunes
-fortunes.css(".col-md-12 ul li")
+	def initialize 
+		fortunesdoc = open("http://joshmadison.com/2008/04/20/fortune-cookie-fortunes/")
+		@fortunes_nokogiri = Nokogiri::HTML(fortunesdoc)
+		@fortunes = []
+	end 
 
-#a specific fortune
+	def scrape_fortunes
+		@fortunes_nokogiri.css(".col-md-12 ul li").each do |fortune|
+			@fortunes << fortune.children.text
+		end
+	end
 
-fortunes.css(".col-md-12 ul li")[0 + rand(303)].children.text
+	def clean_up_fortunes
+		@fortunes.each do |fortune|
+			if fortune.include?("says:")
+				@fortunes.delete(fortune)
+			end
+		end 
+
+	end
+
+end 
+
+newfortune = Fortune.new 
+newfortune.scrape_fortunes
+newfortune.clean_up_fortunes
+puts newfortune.fortunes 
