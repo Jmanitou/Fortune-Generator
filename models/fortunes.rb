@@ -20,6 +20,7 @@ class Fortune
 	def clean_up_fortunes
 		@fortunes.each do |fortune|
 			if fortune.include?("says:")
+			
 				@fortunes.delete(fortune)
 			end
 		end 
