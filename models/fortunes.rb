@@ -1,6 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
-
+require 'pry'
 class Fortune
 
 	attr_accessor :fortunes
@@ -12,21 +12,21 @@ class Fortune
 	end 
 
 	def scrape_fortunes
-		@fortunes_nokogiri.css(".col-md-12 ul li").each do |fortune|
+		
+		@fortunes_nokogiri.css("ul")[2].children.each do |fortune| 
 			@fortunes << fortune.children.text
 		end
+
 	end
 
-	def clean_up_fortunes
-		@fortunes.each do |fortune|
+	 def clean_up_fortunes
+	 	@fortunes.each do |fortune|
 			if fortune.include?("says:")
-			
 				@fortunes.delete(fortune)
-			end
+	 		end
 		end 
 
 	end
-
 end 
 
 newfortune = Fortune.new 
