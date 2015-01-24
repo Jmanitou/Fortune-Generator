@@ -20,5 +20,10 @@ class MyApp < Sinatra::Base
 		Text.new.send_text(params["number"])
 	end
 
+	get '/sendtext' do
+  		redirect to('/')
+	end
+
+
 
 end 
