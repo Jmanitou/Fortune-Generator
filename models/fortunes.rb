@@ -27,9 +27,13 @@ class Fortune
 		end 
 
 	end
-end 
 
-newfortune = Fortune.new 
-newfortune.scrape_fortunes
-newfortune.clean_up_fortunes
-puts newfortune.fortunes 
+	def random_fortune
+		@fortunes.sample
+	end 
+		
+ 
+
+
+
+end 
