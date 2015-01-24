@@ -18,11 +18,9 @@ class MyApp < Sinatra::Base
 	post "/sendtext" do
 		puts params["number"]
 		Text.new.send_text(params["number"])
-	end
-
-	get '/sendtext' do
   		redirect to('/')
 	end
+
 
 
 
