@@ -27,15 +27,13 @@ class Text
 
 	end
 
-	def send_text
+	def send_text(number)
 		@client.messages.create(
 			from: '+14342605034',
-			to: '+19174466098',
+			to: "+1#{number}" ,
 		  	body: @body
 		)
 	end
 end
 
-text_1 = Text.new
-text_1.send_text
 
