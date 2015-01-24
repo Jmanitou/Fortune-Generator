@@ -12,7 +12,6 @@ class Fortune
 	end 
 
 	def scrape_fortunes
-		
 		@fortunes_nokogiri.css("ul")[2].children.each do |fortune| 
 			@fortunes << fortune.children.text
 		end
