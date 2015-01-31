@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Dosis);
 @import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
 
 head {
 
@@ -24,4 +25,8 @@ body {
 
 .second {
 	font-family: 'Lobster', cursive;
+}
+
+.third{
+	font-family: 'Gloria Hallelujah', cursive;
 }
