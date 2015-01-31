@@ -3,15 +3,22 @@
 <html lang="en">
 	<head>
 		<body background="http://38.media.tumblr.com/11bbaf802b49d9165d336364b6d201b8/tumblr_mibpngcE271r39hw6o1_1280.jpg">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<title>What's your fortune?</title>
+
 	</head>
-
 	<body> 
-	
+		<h1><font color="#3366FF" face="arial"><center><%=@fortune.random_fortune%></center></font></h1>
 
-<h1> <font color="#3366FF"> <font face="arial"><center><%=@fortune.random_fortune%></center></h1></font>
 
-<center><a href="/"><img src= "http://1.bp.blogspot.com/_sEaTcl6fG3I/SX4D7lVq_rI/AAAAAAAAAYs/f9CBJP0aHGY/s320/Happy+New+Year+Chinese+3+ATT00091.gif" width=500 height=500><a>
+			<div class="chinese-guy">
+				<a href="/"><img src= "http://1.bp.blogspot.com/_sEaTcl6fG3I/SX4D7lVq_rI/AAAAAAAAAYs/f9CBJP0aHGY/s320/Happy+New+Year+Chinese+3+ATT00091.gif" width=500 height=500>
+				</a>
+			</div>
+			<div class="fortune">
+				<a href="/page"><img src= "images/fortune.png"width="600px"></a>
+			</div>
+			
 
-<a href="/page"><img src= "http://bogost.com/wordpress/wp-content/uploads/bad-fortune-cookie-medium.jpg"width="505" height="505"></a></center>
 	</body>
+</html>

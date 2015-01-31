@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link rel="stylesheet" type="text/css" href="css/style.css"
-		
+		<link rel="stylesheet" type="text/css" href="css/style.css">		
 		<body background="http://38.media.tumblr.com/11bbaf802b49d9165d336364b6d201b8/tumblr_mibpngcE271r39hw6o1_1280.jpg">
 		<title>What's your fortune?</title>
 	</head>
 <body>
 
-
-<marquee behavior="alternate" scrollamount="10"><h1><font color="#3366FF"><font face="arial"> Click to unveil your fortune!</h1></font></marquee>
+	<div class="first">
+		<marquee behavior="alternate" scrollamount="10"><h1><font color="#3366FF">Click to unveil your fortune!</h1></marquee>
+	</div>
 
 
 
 	<center><a href="/page"><img src= "http://img2.wikia.nocookie.net/__cb20130524131112/clubpenguin/images/b/bc/Emoticons_Fortune_Cookie_Card_Jitsu_Party_2013.png" width=500 height=500><a></center>
-
-	<center><h2><p><font color="#3366FF">Want to send a fortune to your friend? Just type their number here!</font></p></h2>
+	<div class="second">
+		<center><h2><p><font color="#3366FF">Want to send a fortune to your friend? Just type their number here!</font></p></h2>
+	
+	
 	<form action="/sendtext" method="POST">
   		<input type="text" name="number">
   		<input type="submit">
 	</form></center>
-
+	</div>
 
 	
 </body>
