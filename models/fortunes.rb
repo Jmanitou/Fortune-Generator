@@ -16,6 +16,9 @@ class Fortune
 			@fortunes << fortune.children.text
 		end
 
+		@fortunes = @fortunes.collect do |fortune|
+			fortune.gsub("(2)", "")
+		end
 	end
 
 	 def clean_up_fortunes
